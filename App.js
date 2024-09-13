@@ -17,12 +17,12 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://3.80.139.95:5000/register', formData);
+    await axios.post('http://172.31.22.150:5000/register', formData);
     fetchUsers();
   };
 
   const fetchUsers = async () => {
-    const response = await axios.get('http://3.80.139.95:5000/users');
+    const response = await axios.get('http://172.31.22.150:5000/users');
     setUsers(response.data);
   };
 
